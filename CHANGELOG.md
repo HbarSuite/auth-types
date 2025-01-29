@@ -46,3 +46,7 @@ All notable changes to this project will be documented in this file.
 - Modified: src/interfaces/namespaces/twilio/interfaces/auth.twilio.secrets.interface.ts
 - Modified: src/models/namespaces/twilio/auth.twilio.namespace.ts
 - Modified: src/models/namespaces/twilio/models/auth.twilio.models.secrets.model.ts
+
+## [2.0.0] - 2025-01-29
+
+- Maintenance update
