@@ -20,16 +20,6 @@
  * @category Authentication
  * @public
  * 
- * @example
- * ```typescript
- * // git-secret-scan: disable
- * const twilioSecrets: _ISecrets = {
- *   accountSid: "AC00000000000000000000000000000000",
- *   authToken: "your_auth_token_here",
- *   serviceSid: "VA00000000000000000000000000000000"
- * };
- * // git-secret-scan: enable
- * ```
  */
 export interface _ISecrets {
     /**
@@ -40,9 +30,6 @@ export interface _ISecrets {
      * This is a public identifier that starts with 'AC' and can be found in your Twilio Console.
      * Required for authenticating all API requests to Twilio.
      * @property {string} accountSid - The unique identifier for your Twilio account
-     * // git-secret-scan: disable
-     * @example "AC00000000000000000000000000000000"
-     * // git-secret-scan: enable
      * @required
      * @public
      * @pattern ^AC[0-9a-fA-F]{32}$
@@ -57,9 +44,7 @@ export interface _ISecrets {
      * This secret token is used to sign API requests and verify that requests come from you.
      * Must be kept secure and never exposed in client-side code or public repositories.
      * @property {string} authToken - The authentication token for your Twilio account
-     * // git-secret-scan: disable
-     * @example "your_auth_token_here"
-     * // git-secret-scan: enable
+     * @example "1234567890abcdef1234567890abcdef"
      * @required
      * @public
      * @security This token should be kept secure and never exposed publicly
@@ -78,9 +63,6 @@ export interface _ISecrets {
      * - IS: Sync Service
      * Required when making API calls to specific Twilio services.
      * @property {string} serviceSid - The unique identifier for a specific Twilio service
-     * // git-secret-scan: disable
-     * @example "VA00000000000000000000000000000000"
-     * // git-secret-scan: enable
      * @required
      * @public
      * @pattern ^(VA|MG|IS)[0-9a-fA-F]{32}$
