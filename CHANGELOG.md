@@ -14,3 +14,7 @@ All notable changes to this project will be documented in this file.
 ## [2.0.0] - 2025-01-29
 
 - Modified: src/interfaces/namespaces/twilio/interfaces/auth.twilio.secrets.interface.ts
+
+## [2.0.0] - 2025-01-29
+
+- Modified: src/interfaces/namespaces/twilio/interfaces/auth.twilio.secrets.interface.ts
