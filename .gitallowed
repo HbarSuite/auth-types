@@ -1,0 +1,15 @@
+# Documentation examples for Twilio SIDs - these are not real secrets
+AC00000000000000000000000000000000
+VA00000000000000000000000000000000
+IS00000000000000000000000000000000
+
+# Compodoc/TSDoc example patterns - explicitly not real secrets
+AC1234567890abcdef1234567890abcdef
+1234567890abcdef1234567890abcdef
+VA1234567890abcdef1234567890abcdef
+your_auth_token_here
+
+# Additional documentation example patterns
+"AC1234567890abcdef1234567890abcdef"
+"1234567890abcdef1234567890abcdef"
+"VA1234567890abcdef1234567890abcdef" 
