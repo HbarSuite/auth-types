@@ -85,13 +85,13 @@ export namespace _Twilio {
      * 
      * // Initialize with environment variables
      * const secrets = new Secrets({
-     *   accountSid: process.env.TWILIO_ACCOUNT_SID,
-     *   authToken: process.env.TWILIO_AUTH_TOKEN,
-     *   serviceSid: process.env.TWILIO_SERVICE_SID
+     *   accountSid: 'AC00000000000000000000000000000000',
+     *   authToken: 'your_auth_token_here',
+     *   serviceSid: 'VA00000000000000000000000000000000'
      * });
      * 
      * // Access credentials
-     * console.log(secrets.accountSid); // AC1234...
+     * console.log(secrets.accountSid); // AC00...
      * ```
      */
     @ApiSchema({

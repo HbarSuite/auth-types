@@ -35,3 +35,8 @@ All notable changes to this project will be documented in this file.
 ## [2.0.0] - 2025-01-29
 
 - Maintenance update
+
+## [2.0.0] - 2025-01-29
+
+- Modified: src/models/namespaces/twilio/auth.twilio.namespace.ts
+- Modified: src/models/namespaces/twilio/models/auth.twilio.models.secrets.model.ts
