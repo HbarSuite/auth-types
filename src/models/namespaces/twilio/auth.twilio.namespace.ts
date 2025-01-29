@@ -30,6 +30,12 @@ import { ApiSchema } from "@hsuite/nestjs-swagger"
  * 
  * @example
  * ```typescript
+ * // Initialize Twilio credentials
+ * const secrets = new _Twilio.Secrets({
+ *   accountSid: 'AC1234567890abcdef1234567890abcdef',
+ *   authToken: '1234567890abcdef1234567890abcdef',
+ *   serviceSid: 'VA1234567890abcdef1234567890abcdef'
+ * });
  * 
  * // Configure Twilio service
  * const options = new _Twilio.Options({
@@ -82,16 +88,22 @@ export namespace _Twilio {
      * 
      * @example
      * ```typescript
+     * // Initialize with direct values
+     * const secrets = new Secrets({
+     *   accountSid: 'AC1234567890abcdef1234567890abcdef',
+     *   authToken: '1234567890abcdef1234567890abcdef',
+     *   serviceSid: 'VA1234567890abcdef1234567890abcdef'
+     * });
      * 
      * // Initialize with environment variables
      * const secrets = new Secrets({
-     *   accountSid: 'AC00000000000000000000000000000000',
-     *   authToken: 'your_auth_token_here',
-     *   serviceSid: 'VA00000000000000000000000000000000'
+     *   accountSid: process.env.TWILIO_ACCOUNT_SID,
+     *   authToken: process.env.TWILIO_AUTH_TOKEN,
+     *   serviceSid: process.env.TWILIO_SERVICE_SID
      * });
      * 
      * // Access credentials
-     * console.log(secrets.accountSid); // AC00...
+     * console.log(secrets.accountSid); // AC1234...
      * ```
      */
     @ApiSchema({

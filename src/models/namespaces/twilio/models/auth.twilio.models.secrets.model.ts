@@ -25,6 +25,12 @@ import { IAuth } from '../../../../interfaces/auth.namespace'
  * The _Secrets class provides a structured way to store and validate Twilio credentials.
  * It ensures that all required credentials are provided and valid before allowing instantiation.
  * 
+ * @example
+ * const twilioSecrets = new _Secrets(
+ *   'AC1234567890abcdef1234567890abcdef',
+ *   '1234567890abcdef1234567890abcdef',
+ *   'IS1234567890abcdef1234567890abcdef'
+ * );
  */
 export class _Secrets implements IAuth.ITwilio.ISecrets {
     /**
@@ -41,10 +47,13 @@ export class _Secrets implements IAuth.ITwilio.ISecrets {
      * The Account SID is a unique identifier that starts with 'AC'.
      * It can be found in your Twilio Console dashboard.
      * 
+     * @example
+     * const accountSid = 'AC1234567890abcdef1234567890abcdef';
      */
     @ApiProperty({
         description: 'The unique identifier for your Twilio account',
         type: () => String,
+        example: 'AC1234567890abcdef1234567890abcdef',
         required: true
     })
     accountSid: string;
@@ -63,11 +72,13 @@ export class _Secrets implements IAuth.ITwilio.ISecrets {
      * The Auth Token should be kept secure and never exposed publicly.
      * It can be regenerated from the Twilio Console if compromised.
      * 
+     * @example
+     * const authToken = '1234567890abcdef1234567890abcdef';
      */
     @ApiProperty({
         description: 'The authentication token for your Twilio account',
         type: () => String,
-        example: 'your_auth_token_here',
+        example: '1234567890abcdef1234567890abcdef',
         required: true
     })
     authToken: string;
@@ -87,10 +98,13 @@ export class _Secrets implements IAuth.ITwilio.ISecrets {
      * For Verify services, it starts with 'VA'.
      * For Messaging services, it starts with 'MG'.
      * 
+     * @example
+     * const serviceSid = 'IS1234567890abcdef1234567890abcdef';
      */
     @ApiProperty({
         description: 'The unique identifier for a specific Twilio service',
         type: () => String,
+        example: 'IS1234567890abcdef1234567890abcdef',
         required: true
     })
     serviceSid: string;
@@ -110,6 +124,12 @@ export class _Secrets implements IAuth.ITwilio.ISecrets {
      * The constructor performs validation on all parameters to ensure they are non-empty strings.
      * This helps prevent invalid credential configurations early in the instantiation process.
      * 
+     * @example
+     * const twilioSecrets = new _Secrets(
+     *   'AC1234567890abcdef1234567890abcdef',
+     *   '1234567890abcdef1234567890abcdef',
+     *   'IS1234567890abcdef1234567890abcdef'
+     * );
      */
     constructor(accountSid: string, authToken: string, serviceSid: string) {
         // Validate accountSid is a non-empty string

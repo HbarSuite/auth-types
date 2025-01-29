@@ -20,6 +20,14 @@
  * @category Authentication
  * @public
  * 
+ * @example
+ * ```typescript
+ * const twilioSecrets: _ISecrets = {
+ *   accountSid: "AC1234567890abcdef1234567890abcdef",
+ *   authToken: "1234567890abcdef1234567890abcdef",
+ *   serviceSid: "VA1234567890abcdef1234567890abcdef"
+ * };
+ * ```
  */
 export interface _ISecrets {
     /**
@@ -30,6 +38,7 @@ export interface _ISecrets {
      * This is a public identifier that starts with 'AC' and can be found in your Twilio Console.
      * Required for authenticating all API requests to Twilio.
      * @property {string} accountSid - The unique identifier for your Twilio account
+     * @example "AC1234567890abcdef1234567890abcdef"
      * @required
      * @public
      * @pattern ^AC[0-9a-fA-F]{32}$
@@ -63,6 +72,7 @@ export interface _ISecrets {
      * - IS: Sync Service
      * Required when making API calls to specific Twilio services.
      * @property {string} serviceSid - The unique identifier for a specific Twilio service
+     * @example "VA1234567890abcdef1234567890abcdef"
      * @required
      * @public
      * @pattern ^(VA|MG|IS)[0-9a-fA-F]{32}$
