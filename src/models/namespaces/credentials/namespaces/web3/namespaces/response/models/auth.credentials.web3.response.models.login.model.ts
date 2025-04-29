@@ -2,7 +2,6 @@ import { ISmartNetwork, SmartNetwork } from "@hsuite/smart-network-types"
 import { ApiProperty } from '@hsuite/nestjs-swagger'
 import { _Entity } from '../../../models/auth.credentials.web3.models.entity.model'
 import { IAuth } from '../../../../../../../../interfaces/auth.namespace'
-import { Auth } from '../../../../../../../auth.namespace'
 
 /**
  * Class representing the login response for Web3 authentication.
@@ -39,7 +38,7 @@ export class _Login implements IAuth.ICredentials.IWeb3.IResponse.ILogin {
         description: 'The authenticated Web3 session information.'
     })
     // session: IAuth.ICredentials.IWeb3.IEntity
-    session: Auth.Credentials.Web3.Entity
+    session: _Entity
 
     /**
      * The operator information associated with the authenticated session.

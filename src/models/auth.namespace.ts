@@ -283,50 +283,13 @@ export namespace Auth {
     export import Web2 = _Web2
 
     /**
-     * Credential Management Models
+     * Credential Management System
      * @type {typeof _Credentials}
      * @description
-     * Models for secure credential management, including storage, validation,
-     * and encryption. Provides types for different credential formats and
-     * security levels.
-     * 
-     * Security Features:
-     * - Encryption at rest
-     * - Secure transmission
-     * - Access control
-     * - Audit logging
-     * - Rotation policies
-     * 
-     * Credential Types:
-     * - Passwords
-     * - API keys
-     * - Access tokens
-     * - Certificates
-     * - SSH keys
-     * 
-     * @example
-     * ```typescript
-     * // Initialize credential manager
-     * const credentials = new Auth.Credentials.Manager({
-     *   encryption: {
-     *     algorithm: 'aes-256-gcm',
-     *     keyDerivation: 'pbkdf2'
-     *   },
-     *   storage: {
-     *     type: 'encrypted',
-     *     location: 'secure_storage'
-     *   }
-     * });
-     * 
-     * // Store credentials
-     * await credentials.store({
-     *   userId: 'user123',
-     *   credentials: {
-     *     password: hashedPassword,
-     *     apiKeys: encryptedApiKeys
-     *   }
-     * });
-     * ```
+     * Comprehensive credential management system that handles authentication
+     * across multiple protocols and methods. Provides secure handling of
+     * user credentials, traditional web authentication, and blockchain-based
+     * authentication mechanisms.
      */
     export import Credentials = _Credentials
 }
